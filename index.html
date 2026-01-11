@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TippyTip - Smart Web Link Manager</title>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="images/logo.png" as="image" type="image/png">
+    <link rel="preload" href="images/hero-image.png" as="image" type="image/png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="https://ka-f.fontawesome.com">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Do you often find yourself sharing or saving web links only to forget about them? TippyTip helps you save, organize, and consume web content with AI-powered summaries, audio playback, and seamless synchronization across all your Apple devices.">
+    <meta name="keywords" content="web content manager, AI summaries, audio playback, knowledge management, productivity app, Apple, iOS">
+    <meta name="author" content="TippyTip">
+    
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="TippyTip - Smart Web Content Manager">
+    <meta property="og:description" content="Save, organize, and consume web content with AI-powered summaries and audio playback.">
+    <meta property="og:image" content="https://tippytip.ai/images/og-image.png">
+    <meta property="og:url" content="https://tippytip.ai">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TippyTip">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TippyTip - Smart Web Content Manager">
+    <meta name="twitter:description" content="Save, organize, and consume web content with AI-powered summaries and audio playback.">
+    <meta name="twitter:image" content="https://tippytip.ai/images/og-image.png">
+    <meta name="twitter:site" content="@tippytipapp">
+    <meta name="twitter:creator" content="@tippytipapp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tippytip.ai">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TippyTip",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "125"
+      },
+      "description": "Do you often find yourself sharing or saving web links only to forget about them?TippyTip helps you save, organize, and consume web content with AI-powered summaries, audio playback, and seamless synchronization across all your Apple devices.",
+      "screenshot": "https://tippytip.ai/images/hero-device.png",
+      "softwareVersion": "1.0",
+      "author": {
+        "@type": "Organization",
+        "name": "TippyTip",
+        "url": "https://tippytip.ai"
+      },
+      "sameAs": [
+        "https://twitter.com/tippytipapp",
+        "https://facebook.com/tippytipapp",
+        "https://instagram.com/tippytipapp",
+        "https://linkedin.com/company/tippytip"
+      ]
+    }
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TippyTip",
+      "url": "https://tippytip.ai",
+      "logo": "https://tippytip.ai/images/tippytip-logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "customer service",
+        "email": "hello@praxagent.ai",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/tippytipapp",
+        "https://facebook.com/tippytipapp",
+        "https://instagram.com/tippytipapp",
+        "https://linkedin.com/company/tippytip"
+      ]
+    }
+    </script>
+    
+    <!-- Stylesheets and Fonts -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f227745edb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/tippytip-logo.png" alt="TippyTip Logo" width="40" height="40">
+                <h1>TippyTip</h1>
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="app_store_privacy_policy.html">Privacy Policy</a></li>
+            </ul>
+            <div class="cta-button">
+                <a href="https://apps.apple.com/us/app/tippytip/id6742724134" class="download-btn">Download Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero-section" class="hero-section">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Transform How You Save and Consume Web Links</h2>
+                    <p>Do you often find yourself sharing or saving web links only to forget about them? TippyTip helps you save, organize, and consume web links with manual (or AI-powered) tagging, summaries, audio playback, and seamless synchronization on your iPhone and iPad.</p>
+                    <div class="app-store-buttons">
+                        <a href="https://apps.apple.com/us/app/tippytip/id6742724134" class="app-store-btn">
+                            <div class="app-store-placeholder">Download on the App Store</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-image.png" alt="TippyTip App on iPhone and Mac" width="450" height="660">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features loaded">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="loading-spinner" aria-label="Loading features"></div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-save">
+                        <i class="fas fa-save"></i>
+                    </div>
+                    <h3>Web Link Management</h3>
+                    <p>Save, organize, and filter web links with tagging, summary, and search capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-brain">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Summaries</h3>
+                    <p>Create tags and summaries manually, or optionally automate this for non-paywalled websites using your own OpenAI API key.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-headphones">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Audio Playback</h3>
+                    <p>You can either record your own audio notes, or let AI create audio summaries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-podcast">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3>Podcast Creation</h3>
+                    <p>Combine multiple summaries into podcast episodes that you can share with friends.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-project-diagram">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Knowledge Graph</h3>
+                    <p>TippyTip will construct a knowledge graph of your saved links using tags as connections between links.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-cloud">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>iCloud Synchronization</h3>
+                    <p>Sync content between your iOS devices seamlessly with iCloud integration.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-share-alt">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Export Links</h3>
+                    <p>Export your link library to a CSV file that can be imported into other link management apps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" data-icon="fa-chart-bar">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Statistics</h3>
+                    <p>Track your link accumulation and consumption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How TippyTip Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-content">
+                        <div class="step-number">1</div>
+                        <h3>Save Content</h3>
+                        <p>Use the share extension to save articles, blog posts, and web pages from any app. If you don't see the TippyTip icon, select the [...] More button and find it there.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="images/share_link.png" alt="share screenshot">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <div class="step-number">2</div>
+                        <h3>Organize and Tag</h3>
+                        <p>Categorize your content with tags which build connections in your knowledge graph.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="images/tag.png" alt="tag screenshot">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <div class="step-number">3</div>
+                        <h3>Generate Summaries</h3>
+                        <p>Manually create your own summaries, or use your OpenAI API key to let AI create concise summaries of your saved content for quick consumption.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="images/summaries.png" alt="summaries screenshot">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-content">
+                        <div class="step-number">4</div>
+                        <h3>Listen On-the-Go</h3>
+                        <p>Convert summaries to audio and combine multiple summaries to create chaptered podcast episodes for listening anywhere.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="images/podcast.png" alt="podcasts screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="testimonials" class="testimonials">
+        LOL no testimonials yet, here's a placeholder:
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="quote">"TippyTip has completely transformed how I consume online content. The AI summaries save me hours every week."</div>
+                    <div class="author">- Sarah K., Product Manager</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"The podcast feature is a game-changer. I can listen to my saved articles during my commute."</div>
+                    <div class="author">- Michael T., Software Engineer</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"As a researcher, the knowledge graph helps me connect ideas across different sources. Brilliant!"</div>
+                    <div class="author">- Dr. Lisa R., Academic Researcher</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Is TippyTip available on other devices and/or other languages.</h3>
+                    <p>TippyTip is currently available for iOS 16.0+ devices (iPhone and iPad). </p>
+                    <p>Expansion to other devices is aspirationally planned for the future. You can easily export your saved content as a CSV file and import it into other link management apps that work on other devices.</p>
+                    <p>TippyTip is currently only available in English. However, if you enable the optional AI summarization feature, OpenAI can in some cases detect the language of the content and generate summaries in that language.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does the optional AI summarization work?</h3>
+                    <p>To be 100% clear, TippyTip is a manual tagging and summary app out of the box. You do <i>not</i> need to use the AI features at all. You can use the manual tagging and manual summary features for all websites. </p>
+                    <p>Under settings, you can enable OpenAI empowered automatic tagging and summarization (requires your own OpenAI API key which is securely stored on device only, if you don't have one you can create one at <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com/api-keys</a>). GPT-4o-mini will analyze your web content and generate concise, accurate tags and summaries that capture the key points. Before presenting these to the user, the app will process the generated tags and summaries through <a href="https://platform.openai.com/docs/guides/moderation" target="_blank">OpenAI's moderation API</a> to ensure they satisfy Apple's App Store guidelines (the moderation calls are free). If you select to enable automatic audio creation in the settings, the app will use OpenAI TTS to generate audio recordings of your summaries. This feature will count against your OpenAI API usage, so users should monitor their usage and costs separately from the app.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Does it work for all websites?</h3>
+                    <p>Manual tagging and summarization works for all websites, since in this mode TippyTip is just a weblink storage app with manual tagging and summaries created by the user.</p>
+                    <p>Automatic tagging and summarization only works for websites that do not require subscription or login, nor will it work for sites that require heavy javascript or human verification to access the content. If you enable AI mode and share an inaccessible site such as one that requires login or human verification, TippyTip will not be able to access the content properly and the automatically generated tags and summaries will not be accurate and will count against your OpenAI API usage.</p>
+                    <p>In AI enabled mode only: In order to abide by Apple's App Store guidelines, TippyTip will process the generated tags and summaries through Open AI's moderation API before displaying them to the user (using your provided API key). This is a safeguard to prevent the generation of offensive or harmful content. Websites with content that is not allowed by OpenAI's moderation API will not be accessible and will not be able to generate summaries or tags.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my data private and secure?</h3>
+                    <p>Yes, your data is stored locally on your device and optionally synced through your personal iCloud account (option in settings, defaults to off). However, if you enable the optional AI summarization feature, your webpage content will be sent to the OpenAI API service for processing. </p>
+                    <p>TippyTip does not collect any of your data. There is no central server that TippyTip reports back to. If you opt to use OpenAI API for automatic tagging and summarization, your API key is securely stored on device only. </p>
+                    <p>OpenAI is a third party service and subject to their own privacy and security policies, TippyTip will only share webpage content with OpenAI API service for the purpose of generating/moderating summaries and tags if you choose to use this feature.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much does TippyTip cost?</h3>
+                    <p>Free from the App Store, no strings attached.</p>
+                    <p>However, if you want to use the OpenAI API for automatic tagging and summarization, you will need to provide your own OpenAI API key in settings and monitor your usage and costs separately from the app. 
+                    </p>
+                    <p>Text summary and tagging use GPT-4o-mini which is a low cost rapid model. The OpenAI moderation API (used to ensure generated tags and summaries satisfy Apple's App Store guidelines) is a free API call. However, the optional audio summary uses OpenAI TTS which can be more costly. The user is responsible for any costs incurred from using the OpenAI API. If you share an inaccessible site such as one that requires login or human verification, TippyTip will not be able to access the content properly and the automatically generated tags and summaries will not be accurate and will count against your OpenAI API usage.</p>
+                    
+                    <div class="openai-links">
+                        <p>OpenAI API resources:</p>
+                        <ul>
+                            <li><a href="https://openai.com/api/pricing/" target="_blank"><i class="fas fa-tag"></i> View OpenAI API pricing</a></li>
+                            <li><a href="https://platform.openai.com/settings/organization/usage" target="_blank"><i class="fas fa-chart-line"></i> Monitor your OpenAI API usage</a></li>
+                            <li><a href="https://platform.openai.com/settings/organization/limits" target="_blank"><i class="fas fa-shield-alt"></i> Set limits on OpenAI API usage</a></li>
+                            <li><a href="https://platform.openai.com/settings/organization/billing" target="_blank"><i class="fas fa-credit-card"></i> Manage your OpenAI API billing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I export my saved content?</h3>
+                    <p>Yes, we have no interest in locking you in to just TippyTip. </p>
+                    <p>TippyTip happily enables you to export your content in various formats for backup or sharing purposes. Your list of links and their summaries can be exported to a CSV file that can be imported into other link management apps. Audio files can be downloaded and shared anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Ready to Transform Your Web Link Management Experience?</h2>
+            <p class="download-description">Download TippyTip today and start organizing your digital knowledge more effectively on your iOS device.</p>
+            <div class="app-store-buttons">
+                <a href="https://apps.apple.com/us/app/tippytip/id6742724134" class="app-store-btn">
+                    <div class="app-store-placeholder">Download on the App Store</div>
+                </a>
+            </div>
+            <!-- <div class="share-section">
+                <p class="share-text">Share TippyTip:</p>
+                <div class="share-buttons">
+                    <a href="https://bsky.app/intent/compose?text=Check%20out%20TippyTip%20-%20a%20smart%20web%20link%20manager%20for%20iOS!%20https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Share on Bluesky"><i class="fa-brands fa-square-bluesky"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20TippyTip%20-%20a%20smart%20web%20link%20manager%20for%20iOS!&url=https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/tippytip-logo.png" alt="TippyTip Logo" width="40" height="40">
+                    <h3>TippyTip</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="app_store_privacy_policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://bsky.app/intent/compose?text=Check%20out%20TippyTip%20-%20a%20smart%20web%20link%20manager%20for%20iOS!%20https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Share on Bluesky"><i class="fa-brands fa-square-bluesky"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20TippyTip%20-%20a%20smart%20web%20link%20manager%20for%20iOS!%20https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftippytip.ai" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tim Jones. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

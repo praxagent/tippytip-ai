@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tippytip.ai/sitemap.xml
+
+# Disallow crawling of admin or development areas if they exist in the future
+# Disallow: /admin/
+# Disallow: /dev/ 
